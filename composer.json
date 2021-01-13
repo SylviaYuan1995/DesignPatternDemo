@@ -1,0 +1,25 @@
+{
+  "name": "design-pattern",
+  "authors": [
+    {
+      "name": "yuanxy",
+      "email": "yuanxy@yoozoo.com"
+    }
+  ],
+  "require": {
+    "phpunit/phpunit": "^8.5"
+  },
+  "scripts": {
+    "test": "vendor/bin/phpunit"
+  },
+  "autoload": {
+    "psr-4": {
+      "DesignPattern\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "DesignPattern\\": "tests"
+    }
+  }
+}
