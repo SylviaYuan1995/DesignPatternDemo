@@ -2,29 +2,29 @@
 
 namespace DesignPattern\Creational\Singleton;
 
+/**
+ * 单例模式demo
+ * Class CurrentUser
+ * @package DesignPattern\Creational\Singleton
+ */
 class  CurrentUser
 {
-    private static $token = '';
-    private static $userInfo = [];
+    private static $instance = null; //当前类的实例（私有）
+    private static $token = ''; //当前用户的token值（私有）
+    private static $userInfo = [];  //当前用户基本信息数组（私有）
 
-    //1.创建一个静态私有属性,用于保存当前类的实例
-    private static $instance = null;
-
-    //2.构造方法私有化,从而禁止从外部用new关键字创建实例
-    private function __construct($token, $userInfo)
+    private function __construct($token, $userInfo)  //私有的构造方法，从而禁止从外部用 new 关键字创建实例（私有）
     {
         self::$token = $token;
         self::$userInfo = $userInfo;
     }
 
-    //3.克隆方法私有化,从而禁止从外部通过clone关键字创建实例
-    private function __clone()
+    private function __clone()   //克隆方法私有化,从而禁止从外部通过 clone 关键字创建实例（私有）
     {
 
     }
 
-    //4.定义公共静态方法,用于生成当前类的实例
-    public static function getInstance($token, $userInfo)
+    public static function getInstance($token, $userInfo) //用于生成当前类的实例（公共）
     {
         //如果$instance变量中保存的不是当前类的实例
         if (!self::$instance instanceof self) {
@@ -35,14 +35,14 @@ class  CurrentUser
         return self::$instance;
     }
 
-    public static function getToken()
+    public static function getToken() //用于获取当前用户 token
     {
         return self::$token;
     }
 
-    public static function getUserInfo()
+    public static function getUserInfo()  //用于获取当前用户信息数组 userInfo
     {
         return self::$userInfo;
     }
-
 }
+
