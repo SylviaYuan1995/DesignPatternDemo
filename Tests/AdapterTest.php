@@ -9,8 +9,8 @@ use DesignPattern\Structural\Adapter\SubwayCardAdapter;
 use DesignPattern\Structural\Adapter\SubwayCardInterface;
 
 /**
- * 测试单例模式
- * Class SingletonTest
+ * 测试适配器模式
+ * Class AdapterTest
  * @package Creational\Singleton\Tests
  */
 class AdapterTest extends TestCase
