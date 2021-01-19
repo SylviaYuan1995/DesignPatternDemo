@@ -25,7 +25,7 @@ class HelloCommand implements CommandInterface
     }
 
     /**
-     * 执行并输出 "Hello World"
+     * 执行命令（并输出 Hello World）
      */
     public function execute()
     {
